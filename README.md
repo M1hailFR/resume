@@ -1,58 +1,75 @@
-# Nuxt 3 + Vuetify 3 + i18n Starter Project
+# Nuxt Minimal Starter
 
-### Run the app
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-1. Install the deps
+## Setup
+
+Make sure to install dependencies:
 
 ```bash
+# npm
 npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-2. Run the app
+## Development Server
+
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
 npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
-### Stuff used
+## Production
 
-- NuxtJS
-- Nuxt Icon
-- Sass
-- Vuetify
-- [@vite-pwa/nuxt](https://github.com/vite-pwa/nuxt)
-- Vite Plugin Vuetify
+Build the application for production:
 
-### Custom Sass File
+```bash
+# npm
+npm run build
 
-The `.scss` file that can be found in the `assets` folder have some gradients & other styles. They can be deleted or updated.
+# pnpm
+pnpm build
 
-### ~~Helpers Folder~~ Utils Folder
+# yarn
+yarn build
 
-The ~~helper~~ utils folder contains the custom stuff for the Vuetify plugin
+# bun
+bun run build
+```
 
-#### Custom Icons - `customIcons.ts`
+Locally preview production build:
 
-So I switched from the nuxt-icon module to the @iconify/vue component [here](https://docs.iconify.design/icon-components/vue/). It plays better with Vuetify with custom icons
+```bash
+# npm
+npm run preview
 
-Here is a link to the docs for this [Creating a custom iconset](https://next.vuetifyjs.com/en/features/icon-fonts/#creating-a-custom-icon-set)
+# pnpm
+pnpm preview
 
-#### Global Defaults - `defaults.ts`
+# yarn
+yarn preview
 
-This file here just set global props on different vuetify components. You can learn more here [Global Configuration](https://next.vuetifyjs.com/en/features/global-configuration/)
+# bun
+bun run preview
+```
 
-#### Themes - `themes.ts`
-
-This file will hold all the different themes that you want to use in your app. Feel free to add more crazy schemes lol. Learn more here: [Vuetify Themes](https://next.vuetifyjs.com/en/features/theme/)
-
-#### Form Rules - Composable
-
-I added one composable for form rules. Add more here. You can even try integrating other validation packages like `yup` or `zod`
-
-#### Yup & Vee-Validate
-
-I will definitely be switching to vee-validate for dealing with forms.
-
-#### Icons
-
-The public folder contains a `favicon` & `icon`. Change these out for your app and be sure to tweak the pwa config inside the `nuxt.config` file to fit your app
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
