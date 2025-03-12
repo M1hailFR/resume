@@ -1,0 +1,5 @@
+@use './animation.scss';
+@use './globals.scss';
+
+@include font-face('ProximaNova', '@/assets/fonts/ProximaNova/ProximaNova-Regular', 400);
+@include font-face('ProximaNova', '@/assets/fonts/ProximaNova/ProximaNova-Bold', 700);
