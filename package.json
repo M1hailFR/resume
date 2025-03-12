@@ -32,7 +32,7 @@
     "pinia": "^2.3.1",
     "vite-plugin-vuetify": "^2.0.4",
     "vue": "latest",
-    "vue-i18n": "^11.1.0",
+    "vue-i18n": "^11.1.2",
     "vue-router": "latest",
     "vue-tsc": "^2.1.10"
   }
