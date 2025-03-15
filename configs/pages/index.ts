@@ -131,7 +131,6 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
       title: "resume.skills.title",
       list: [
         {
-            
           title: "resume.skills.design.title",
           icon: "palette",
           info: [
@@ -139,7 +138,7 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
             "resume.skills.design.list.responsive",
             "resume.skills.design.list.accessibility",
             "resume.skills.design.list.detailsAttention",
-            "resume.skills.design.list.consistentSpacing", 
+            "resume.skills.design.list.consistentSpacing",
             "resume.skills.design.list.animationsTransitions",
             "resume.skills.design.list.userExperience",
             "resume.skills.design.list.colorSchemes",
@@ -147,8 +146,8 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
             "resume.skills.design.list.prototyping",
             "resume.skills.design.list.adaptiveDesign",
             "resume.skills.design.list.microAnimations",
-            "resume.skills.design.list.styleGuides"
-          ]
+            "resume.skills.design.list.styleGuides",
+          ],
         },
         {
           title: "resume.skills.development.title",
@@ -172,8 +171,8 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
             "resume.skills.development.list.oop",
             "resume.skills.development.list.dry",
             "resume.skills.development.list.component",
-            "resume.skills.development.list.modular"
-          ]
+            "resume.skills.development.list.modular",
+          ],
         },
       ],
     },
