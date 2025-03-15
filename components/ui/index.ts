@@ -12,6 +12,8 @@ import VCollapse from './VCollapse.vue'
 import VTitle from './VTitle.vue'
 import VImage from './VImage.vue'
 import VTimeline from './VTimeline.vue'
+import VBadge from './VBadge.vue'
+import VTextInputArea from './VTextInputArea.vue'
 
 export * from './v-list'
 
@@ -29,6 +31,7 @@ export {
   VCollapse,
   VTitle,
   VImage,
-  VTimeline
-
+  VTimeline,
+  VBadge,
+  VTextInputArea,
 }

@@ -7,7 +7,7 @@
             <v-title
               v-if="fields.text"
               tag="h2"
-              defaultClass="text-lighter"
+              defaultClass="text-neutrals-1 text-title5"
               :title="t(fields.text)"
             />
           </div>
@@ -17,20 +17,20 @@
                 v-if="fields.buttonForm"
                 size="small"
                 @click="changeIsOpenCallback"
-                class="text-body-2 px-4 py-2"
+                class="text-body3 px-2 py-1"
               >
-                {{ t(fields.buttonForm) }}
+                {{ isOpenCallback ? t('Закрыть') : t(fields.buttonForm) }}
               </v-button>
               <component
                 :is="getIconTheme()"
                 class="cursor-pointer"
                 @click="appStore.toggleTheme"
-                :size="24"
+                :size="20"
               />
               <component
                 :is="IconLang"
                 @click="switchLanguage(appStore.localeLang === 'ru' ? 'en' : 'ru')"
-                :size="24"
+                :size="20"
                 class="cursor-pointer"
                 :class="appStore.localeLang === 'ru' ? 'text-neutrals-1' : 'text-brand-2'"
               />

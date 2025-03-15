@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar v-model="isOpenCallback" fullscreen z-index="200" class="sidebar">
+  <v-sidebar v-model="isOpenCallback" fullscreen z-index="200" class="sidebar" background="background">
     <v-container class="sidebar--container">
       <component
         :is="modalContent"
@@ -55,6 +55,7 @@ watch(isOpenCallback, newValue => {
   padding-top: 88px;
 
   &--container {
+    
     height: 100%;
   }
 

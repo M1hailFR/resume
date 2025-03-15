@@ -4,8 +4,8 @@
       <div class="success--status rounded-circle pa-4">
         <IconThumb size="32" class="text-brand-1" />
       </div>
-      <div class="text-center mt-6 text-title4 text-neutrals-5">Данные успешно отправлены</div>
-      <div class="text-center mt-1 text-body2 text-neutrals-5">Мы ответим вам в течение N минут</div>
+      <div class="text-center mt-6 text-title4 text-neutrals-1 ">{{ t('form.success') }}</div>
+      <div class="text-center mt-1 text-body2 text-neutrals-1 opacity-75">{{ t('form.success_description') }}</div>
       <v-button block class="mt-14" @click="onCloseModal"> Ок </v-button>
     </div>
   </div>
@@ -14,6 +14,8 @@
 <script setup lang="ts">
 import { VButton } from '~/components/ui';
 import { IconThumb } from '~/components/icons';
+import { useTranslation } from '~/composables/useTranslation';
+
 defineOptions({
   name: 'SharedFormSuccess'
 });
@@ -29,6 +31,8 @@ withDefaults(defineProps<ISharedFormSuccessProps>(), {
 const emit = defineEmits<{
   close: [];
 }>();
+
+const { t } = useTranslation();
 
 const onCloseModal = () => {
   emit('close');

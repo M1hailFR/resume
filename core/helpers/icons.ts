@@ -49,5 +49,25 @@ export const getIconByKey = (key: IconPropType) => {
       return icon.IconNight;
     case IconsEnum.Lang:
       return icon.IconLang;
+    case IconsEnum.Geo:
+      return icon.IconGeo;
+    case IconsEnum.Github:
+      return icon.IconGitHub;
+    case IconsEnum.Site:
+      return icon.IconSite;
+    case IconsEnum.Telegram:
+      return icon.IconTelegram;
+    case IconsEnum.Hh:
+      return icon.IconHh;
+    case IconsEnum.EnFlag:
+      return icon.IconEnFlag;
+    case IconsEnum.RuFlag:
+      return icon.IconRuFlag;
+    case IconsEnum.Blocks:
+      return icon.IconBlocks;
+    case IconsEnum.Palette:
+      return icon.IconPalette;
+    case IconsEnum.Code:
+      return icon.IconCode;
   }
 };

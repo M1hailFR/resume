@@ -22,11 +22,19 @@ import IconSunny from './IconSunny.vue';
 import IconNight from './IconNight.vue';
 import IconLang from './IconLang.vue';
 import IconSite from './IconSite.vue';
+import IconGeo from './IconGeo.vue';
+import IconBlocks from './IconsBlocks.vue';
+import IconPalette from './IconPalette.vue';
+import IconCode from './IconCode.vue';
 // socials icons
 import IconVk from './socials/IconVk.vue';
 import IconTelegram from './socials/IconTelegram.vue';
 import IconWhatsApp from './socials/IconWhatsApp.vue';
 import IconGitHub from './socials/IconGitHub.vue';
+import IconHh from './socials/IconHh.vue';
+// langs icons
+import IconEnFlag from './langs/IconEnFlag.vue';
+import IconRuFlag from './langs/IconRuFlag.vue';
 
 export {
   IconMail,
@@ -52,10 +60,18 @@ export {
   IconSunny,
   IconNight,
   IconLang,
+  IconSite,
+  IconGeo,
+  IconBlocks,
+  IconPalette,
+  IconCode,
   // socials icons
   IconVk,
   IconTelegram,
   IconWhatsApp,
   IconGitHub,
-  IconSite
+  IconHh,
+  // langs icons
+  IconEnFlag,
+  IconRuFlag,
 };

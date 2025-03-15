@@ -1,17 +1,18 @@
 <template>
-  <v-text-field
+  <v-textarea
     v-model="model"
     variant="outlined"
-    clearable
-    flat
     :label="label"
+    flat
+    clearable
     required
+    no-resize
     density="comfortable"
     bg-color="neutrals-4"
     base-color="neutrals-1"
     color="neutrals-1"
     rounded="lg"
-    class="v-input-custom text-caption transition-all"
+    class="v-textarea-custom text-caption transition-all"
     v-bind="$attrs"
   >
     <template v-slot:clear>
@@ -21,20 +22,21 @@
         </slot>
       </span>
     </template>
-  </v-text-field>
+  </v-textarea>
 </template>
 
 <script setup lang="ts">
 import { IconCross } from "../icons";
+
 defineOptions({
-  name: "VInput",
+  name: "VTextarea",
 });
 
-interface IInputProps {
+interface ITextareaProps {
   label?: string;
 }
 
-withDefaults(defineProps<IInputProps>(), {
+withDefaults(defineProps<ITextareaProps>(), {
   label: "",
 });
 
@@ -46,12 +48,15 @@ const reset = () => {
 </script>
 
 <style lang="scss" scoped>
-.v-input-custom {
+.v-textarea-custom {
   :deep {
     &.v-input {
       .v-field {
-        &__overlay {
-          display: none;
+        &__input {
+          &::-webkit-scrollbar {
+            width: 0px;
+            background-color: #f9f9fd;
+          }
         }
 
         &:hover,
@@ -60,7 +65,6 @@ const reset = () => {
         }
         &--error {
           border-color: get-rgb-color(danger);
-
           .v-label {
             color: get-rgb-color(neutrals-1, 0.8);
           }

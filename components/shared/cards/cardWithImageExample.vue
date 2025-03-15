@@ -15,11 +15,16 @@
       </div>
     </div>
     <div class="d-flex ga-2">
-      <v-link v-if="repo" :link="repo" target="_target" class="card--link mt-1  d-flex align-center">
-        <component :is="IconGitHub" :size="20" class="cursor-pointer" />
+      <v-link v-if="repo" :link="repo" target="_target" class="card--link mt-1 d-flex align-center">
+        <component :is="IconGitHub" :size="20" class="card--link-icon" />
       </v-link>
-      <v-link v-if="site" :link="site" target="_target" class="card--link mt-1 d-flex align-center ga-2">
-        <component :is="IconSite" :size="20" class="cursor-pointer" />
+      <v-link
+        v-if="site"
+        :link="site"
+        target="_target"
+        class="card--link mt-1 d-flex align-center ga-2"
+      >
+        <component :is="IconSite" :size="20" rotate="half" class="card--link-icon" />
         {{ site }}
       </v-link>
     </div>
@@ -55,7 +60,15 @@ const { t } = useTranslation();
     display: flex;
     gap: $spacer * 3;
   }
-
+  &--link {
+    &-icon {
+      background-color: get-rgb-color(neutrals-1, 0.2);
+      border-radius: 50%;
+      height: 28px;
+      width: 28px;
+      padding: 4px;
+    }
+  }
   &--title {
     flex: 1;
     min-width: 0;
@@ -67,21 +80,23 @@ const { t } = useTranslation();
 
   &--content {
     flex-shrink: 0;
-    width: 82px;
+    width: 64px;
   }
 
   &--image {
-    width: 82px;
+    background-color: get-rgb-color(neutrals-1, 0.03);
+    padding: 8px;
+    width: 64px;
     aspect-ratio: 1/1;
   }
 
-  &--hovered {
-    border: 1px solid get-rgb-color(brand-1);
+  // &--hovered {
+  //   border: 1px solid get-rgb-color(brand-1);
 
-    :deep(a) {
-      color: get-rgb-color(primary);
-      text-decoration: underline;
-    }
-  }
+  //   :deep(a) {
+  //     color: get-rgb-color(primary);
+  //     text-decoration: underline;
+  //   }
+  // }
 }
 </style>

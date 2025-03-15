@@ -30,8 +30,16 @@ export enum IconsEnum {
   Sunny = 'sunny',
   Night = 'night',
   Lang = 'lang',
+  Geo = 'geo',
   Github = 'github',
-  Site = 'site'
+  Site = 'site',
+  Telegram = 'telegram',
+  Hh = 'hh',
+  EnFlag = 'en-flag',
+  RuFlag = 'ru-flag',
+  Blocks = 'blocks',
+  Palette = 'palette',
+  Code = 'code',
 }
 
 export type IconPropType = `${IconsEnum}` | null;
@@ -74,6 +82,7 @@ export enum SidesEnum {
   RIGHT = 'right',
   BOTTOM = 'bottom',
   LEFT = 'left',
+  HALF = 'half'
 }
 
 export type SidesType = `${SidesEnum}` | null;

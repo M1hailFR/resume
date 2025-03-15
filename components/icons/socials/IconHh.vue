@@ -3,21 +3,21 @@
     xmlns="http://www.w3.org/2000/svg"
     :width="width || size"
     :height="height || size"
-    viewBox="0 0 24 24"
+    viewBox="0 0 32 32"
     fill="none"
     :transform="`rotate(${getIconRotate(rotate)})`"
   >
     <path
       fill="currentColor"
-      d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5"
+      d="M13 9v6H9V9H7v14h2v-6h4v6h2V9zm10 4h-4V9h-2v14h2v-8h4v8h2v-8a2 2 0 0 0-2-2"
     />
   </svg>
 </template>
 
 <script setup lang="ts">
-import { getIconRotate, type IPropsIcon } from "./shared";
+import { getIconRotate, type IPropsIcon } from "../shared";
 defineOptions({
-  name: "IconSite",
+  name: "IconHh",
 });
 
 withDefaults(defineProps<IPropsIcon>(), {

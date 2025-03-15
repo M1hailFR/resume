@@ -4,7 +4,6 @@
       <div class="dialog--close" @click="closeModal">
         <IconCross size="24" class="text-neutrals-2" />
       </div>
-
       <component
         :is="modalContent"
         :form-settings="modalSettings"

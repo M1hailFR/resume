@@ -1,26 +1,40 @@
 <template>
-  <div class="card" :class="`card-${size}`">
-    <div class="card--inner d-flex flex-column justify-center align-center">
-      <img v-if="logo" :src="logo" class="card--logo" />
-      <div v-if="isMediumCard" class="card--description">
-        <div v-if="value" class="text-brand-1 text-title6 text-md-title4">{{ value }}</div>
-        <div v-if="text" class="text-neutrals-5 text-body3 text-md-body2">{{ text }}</div>
+  <div class="card rounded-lg transition-all" :class="`card-${size}`">
+    <div class="card--inner d-flex flex-column">
+      <div class="d-flex align-center ga-4">
+        <img
+          v-if="logo"
+          :src="logo"
+          class="card--logo rounded-lg"
+          :class="`card-${size}-logo`"
+        />
+        <div v-if="value" class="title" :class="size === 'medium' ? 'text-body2' : 'text-body3'">
+          {{ t(value) }}
+          <div v-if="time" class="text-neutrals-1 text-body3 opacity-50">{{ t(time) }}</div>
+        </div>
+      </div>
+
+      <div v-if="text" class="card--description">
+        <div v-if="text" class="text text-neutrals-1 text-body3 opacity-60">{{ t(text) }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { type ICardWithLogoProps } from './shared';
-import { SizesEnum } from '~/core/types/components';
+import { type ICardWithLogoProps } from "./shared";
+import { SizesEnum } from "~/core/types/components";
+import { useTranslation } from "~/composables/useTranslation";
+
 defineOptions({
-  name: 'CardWithLogo'
+  name: "CardWithLogo",
 });
 
 const props = withDefaults(defineProps<ICardWithLogoProps>(), {
-  size: SizesEnum.MEDIUM
+  size: SizesEnum.MEDIUM,
 });
 
+const { t } = useTranslation();
 const isMediumCard = computed(() => {
   return props.size === SizesEnum.MEDIUM;
 });
@@ -28,43 +42,49 @@ const isMediumCard = computed(() => {
 
 <style lang="scss" scoped>
 .card {
+  border: 1px solid get-rgb-color(brand-1, 0.1);
+  background-color: get-rgb-color(neutrals-1, 0.02);
+  cursor: pointer;
   &-medium {
-    height: 160px;
     padding: $spacer * 4;
-
     @include above(map.get($grid-breakpoints, md)) {
-      height: 232px;
       padding: $spacer * 5 $spacer * 6;
+    }
+    &-logo {
+      max-width: 48px;
+      max-height: 48px;
+    }
+    .title {
+      color: get-rgb-color(neutrals-1);
+    }
+    .text {
+      @include line-clamp(3);
     }
   }
 
   &-small {
-    height: 75px;
-    padding: $spacer * 5 $spacer * 2;
+    padding: $spacer * 2 $spacer * 4;
 
-    @include above(map.get($grid-breakpoints, md)) {
-      height: 122px;
-      padding: $spacer * 8 $spacer * 3;
+    &-logo {
+      max-width: 32px;
+      max-height: 32px;
+    }
+    .title {
+      color: get-rgb-color(neutrals-1);
+    }
+    .text {
+      @include line-clamp(2);
     }
   }
 
   &--inner {
     height: 100%;
     position: relative;
+    gap: $spacer * 2;
   }
 
-  &--logo {
-    max-height: 30px;
-
-    @include above(map.get($grid-breakpoints, md)) {
-      max-height: 50px;
-    }
-  }
-
-  &--description {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  &:hover {
+    border: 1px solid get-rgb-color(brand-1);
   }
 }
 </style>

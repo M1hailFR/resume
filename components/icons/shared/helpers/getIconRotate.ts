@@ -3,6 +3,8 @@ import { SidesEnum } from '~/core/types/components';
 
 export default function (rotateSide: IPropsIcon['rotate']) {
   switch (rotateSide) {
+    case SidesEnum.HALF:
+      return 45;
     case SidesEnum.LEFT:
       return 90;
     case SidesEnum.RIGHT:

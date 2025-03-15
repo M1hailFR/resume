@@ -13,10 +13,11 @@ export interface ICardWithIndexProps {
 }
 
 export interface ICardWithLogoProps {
-  logo: string;
+  logo?: string;
   value?: string;
   text?: string;
   size?: SizesType;
+  time?: string;
 }
 
 export interface ICardWithImageExampleProps {
@@ -55,6 +56,9 @@ export interface ICardWithInfoProps {
   text?: string;
   post?: string;
   time?: string;
+  info?: string[];
+  icon?: IconPropType;
+  minWidth?: number;
 }
 
 export enum SharedCardsKeysEnum {

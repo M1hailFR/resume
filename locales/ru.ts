@@ -22,6 +22,12 @@ export default {
     buttonForm: "Написать",
   },
   form: {
+    name: "Имя*",
+    email: "Email*",
+    message: "Сообщение",
+    phone: "Телефон*",
+    success: "Данные успешно отправлены",
+    success_description: "Мы ответим вам в течение нескольких минут",
     title: "Обратная связь",
     subtitle: "Заполните форму ниже.",
     buttonText: "Отправить",
@@ -31,8 +37,8 @@ export default {
   },
   resume: {
     name: "Михаил Филиппов",
-    title: "Frontend разработчик",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    title: "Фронтенд разработчик",
+    text: "Фронтенд – это искусство превращать макет в сайт и баги в фичи",
     contacts: {
       title: "Контакты",
       email: "Почта",
@@ -57,62 +63,144 @@ export default {
       },
     },
     skills: {
+      title: "Навыки",
       design: {
         title: "Дизайн",
+        list: {
+          uiDesign: "UI/UX Design",
+          responsive: "Responsive layouts",
+          accessibility: "Accessibility",
+          detailsAttention: "Внимание к деталям",
+          consistentSpacing: "Консистентные отступы",
+          animationsTransitions: "Анимации и переходы",
+          userExperience: "Пользовательский опыт",
+          colorSchemes: "Цветовые схемы",
+          typography: "Типографика",
+          prototyping: "Прототипирование",
+          adaptiveDesign: "Адаптивный дизайн",
+          microAnimations: "Микроанимации",
+          styleGuides: "Стилевые руководства",
+        },
       },
       development: {
         title: "Разработка",
+        list: {
+          vue: "Vue.js 3 / Nuxt 33",
+          composition: "Composition API",
+          options: "Options API",
+          solid: "SOLID",
+          typescript: "TypeScript",
+          scss: "SCSS/SASS",
+          cssModules: "CSS Modules",
+          css: "CSS",
+          flexbox: "Flexbox",
+          i18n: "i18n",
+          pinia: "pinia",
+          vuex: "vuex",
+          router: "vue-router",
+          toast: "vue-toastification",
+          meta: "vue-meta",
+          oop: "ООП",
+          dry: "DRY",
+          component: "Компонентный подход",
+          modular: "Модульная структура",
+        },
       },
     },
     education: {
       title: "Образование",
+      education1: {
+        title: "ОГУ",
+        text: "Специалист по защите информации. Институт математики и информационных технологий.",
+        time: "Сентябрь 2019 - Январь 2025",
+      },
+      education2: {
+        title: "JavaScript.Ninja",
+        text: "Нюансы проектирования приложений, реальные примеры из опыта разработчиков.",
+        time: "Январь 2022 - Май 2022",
+      },
     },
     projects: {
       title: "Проекты",
       project1: {
-        title: "Проект 1",
-        text: "Описание проекта 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        title: "rmnch",
+        text: "Это веб-проект на Nuxt.js 3, использующий Vuetify как UI-фреймворк и включающий PWA функциональность. Проект имеет продвинутую архитектуру с использованием Pinia для управления состоянием, поддержкой TypeScript, а также включает интеграцию с моментом для работы с датами и маской ввода для форм.",
       },
       project2: {
-        title: "Проект 2",
-        text: "Описание проекта 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. ",
+        title: "pro.spisanie",
+        text: "Современный веб-проект, построенный на фреймворке Nuxt.js 3 с использованием TypeScript, который включает в себя интеграцию с Яндекс.Метрикой и использует Tailwind CSS для стилизации. Проект имеет полноценную структуру с компонентами, страницами, хранилищем состояния Pinia и настроен для развертывания на платформе Netlify",
       },
       project3: {
         title: "Проект 3",
-        text: "Описание проекта 3",
+        text: "Это современное одностраничное приложение (SPA) на Vue.js 3 с полноценной архитектурой. В проекте также настроен Service Worker для поддержки PWA-функциональности, что делает его потенциально доступным в офлайн-режиме.",
       },
       project4: {
         title: "Проект 4",
-        text: "Описание проекта 4",
-      },
-      project5: {
-        title: "Проект 5",
-        text: "Описание проекта 5",
+        text: "Это проект на Vue 3 с Vite, который представляет собой систему управления контейнерами и операциями. Проект использует современный стек технологий включая Pinia для управления состоянием, TypeScript для типизации и SASS для стилизации, а также настроен для развертывания на платформе Netlify.",
       },
     },
     experience: {
       title: "Опыт работы",
       experience1: {
-        title: "Опыт работы 1",
-        text: "Описание опыта работы 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-        post: "Должность 1",
-        time: "2020-2021",
+        title: "Toscale",
+        text: `Активно работал над проектом toscale-research - это современное веб-приложение на базе Nuxt.js/Vue.js, предназначенное для исследований и аналитики криптовалютного рынка.
+          В качестве фронтенд-разработчика я занимался созданием и обновлением ключевых компонентов пользовательского интерфейса, внедрял систему уведомлений с расширенной логикой для отслеживания финансовых показателей,
+          работал над локализацией проекта и улучшением страницы детальной информации о криптовалютах. Проект использует современный технологический стек, включающий Tailwind css для стилизации, различные библиотеки для визуализации данных (Chart.js, Highcharts),
+          систему контроля версий Git и следует лучшим практикам разработки с регулярными коммитами и активным участием в code review.
+          Мой вклад в проект охватывал как фронтенд-разработку, так и реализацию сложной бизнес-логики, связанной с криптовалютными данными и финансовыми инструментами.`,
+        post: "Фронтенд разработчик",
+        time: "Октябрь 2023 - январь 2025",
       },
       experience2: {
-        title: "Опыт работы 2",
-        text: "Описание опыта работы 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-        post: "Должность 2",
-        time: "2021-2022",
-      },
-      experience3: {
-        title: "Опыт работы 3",
-        text: "Описание опыта работы 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-        post: "Должность 3",
-        time: "2022-2023",
+        title: "ReLead",
+        text: `Создании современных веб-приложений на Vue.js/Nuxt, разработка лендингов и многостраничных сайтов; в компании Relead успешно реализовал серию проектов по созданию адаптивных веб-сайтов с использованием Vue 3, Nuxt 3, Pinia, Vuetify, Taiwind; 
+          настроил мультиязычность и интеграцию с внешними сервисами; особое внимание уделял качеству пользовательского интерфейса, производительности и SEO-оптимизации, что позволило увеличить конверсию сайтов на 10% и улучшить метрики`,
+        post: "Фронтенд разработчик",
+        time: "январь 2025 - по настоящее время",
       },
     },
     tools: {
       title: "Инструменты",
+      tool1: {
+        title: "Figma",
+        text: "Дизайн интерфейсов",
+      },
+      tool2: {
+        title: "VS Code",
+        text: "Основная среда разработки",
+      },
+      tool3: {
+        title: "Git",
+        text: "Система контроля версий",
+      },
+      tool4: {
+        title: "Postman",
+        text: "Тестирование API",
+      },
+      tool5: {
+        title: "npm",
+        text: "Управление пакетами",
+      },
+      tool6: {
+        title: "pnpm",
+        text: "Управление пакетами",
+      },
+      tool7: {
+        title: "Docker",
+        text: "Контейнеризация",
+      },
+      tool8: {
+        title: "Terminal",
+        text: "Работа с командной строкой",
+      },
+      tool9: {
+        title: "Webpack",
+        text: "Сборка проекта",
+      },
+      tool10: {
+        title: "Vite",
+        text: "Сборка проекта",
+      },
     },
   },
 };

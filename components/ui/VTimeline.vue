@@ -9,7 +9,8 @@
     <span v-if="!customMark" class="v-timeline--marker-standart rounded-circle" />
     <div class="v-timeline--details mb-4">
       <span 
-        v-if="title" 
+        v-if="title"
+        class="ml-2 ml-sm-0" 
         :class="`static-class ${defaultClass} ${additionalClass}`"
       >
         {{ t(title) }}
@@ -44,7 +45,7 @@ withDefaults(defineProps<IVTimelineProps>(), {
   divider: false,
   customMark: false,
   title: "",
-  defaultClass: 'text-body1 text-neutrals-1 opacity-60 d-block mt-1 mb-4',
+  defaultClass: 'text-body1 text-neutrals-1 d-block mt-1 mb-4',
   additionalClass: '',
 });
 
@@ -59,36 +60,61 @@ const defaultCustomIcon = IconsEnum.Check;
 
   &--marker {
     &-custom {
-      border: 1px solid get-rgb-color(neutrals-1, 0.2);
-      background: get-rgb-color(background);
+      margin-top: 8px;
+      border: 4px solid get-rgb-color(neutrals-1, 0.2);
+      background-color: get-rgb-color(brand-1);
       border-radius: 8px;
-      padding: 6px;
-      min-width: 32px;
-      min-height: 32px;
+      min-width: 16px;
+      min-height: 16px;
     }
     &-standart {
-      border: 12px solid get-rgb-color(background);
-      background: get-rgb-color(neutrals-1);
+      margin-top: 3px;
+      border: 4px solid get-rgb-color(background);
+      background-color: get-rgb-color(neutrals-1);
       border-radius: 8px;
-      width: 32px;
-      height: 32px;
+      width: 16px;
+      height: 16px;
     }
+    
   }
   &--details {
     flex: 1;
-    margin-left: 1rem;
+    margin-left: .5rem;
   }
   &:after {
     content: "";
     width: 1px;
     position: absolute;
-    margin-left: 15px;
-    top: 32px;
+    margin-left: 7px;
+    top: 16px;
     height: calc(100%);
     background: get-rgb-color(neutrals-1, 0.2);
   }
   &:last-of-type:after {
     display: none;
+  }
+  @include above(map.get($grid-breakpoints, sm)) {
+    &--marker {
+      &-custom, &-standart {
+        margin-top: 0;
+        width: 32px;
+        height: 32px;
+      }
+      &-custom {
+        padding: 8px;
+        border: 1px solid get-rgb-color(neutrals-1, 0.2);
+      }
+      &-standart {
+        border-width: 12px;
+      }
+    }
+    &:after {
+      margin-left: 15px;
+      top: 32px;
+    }
+    &--details {
+      margin-left: 1rem;
+    }
   }
 }
 </style>

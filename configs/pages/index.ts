@@ -28,7 +28,7 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
             link: "tel:+79958360911",
           },
           {
-            icon: "mail",
+            icon: "geo",
             title: "resume.contacts.address",
             text: "Orenburg, Russia",
             link: "https://yandex.ru/maps/48/orenburg/?ll=55.098500%2C51.768200&z=12",
@@ -39,19 +39,19 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
         title: "resume.socials.title",
         list: [
           {
-            icon: "mail",
+            icon: "telegram",
             title: "resume.socials.telegram",
             text: "@M1hailFR",
             link: "https://t.me/M1hailFR",
           },
           {
-            icon: "mail",
+            icon: "github",
             title: "resume.socials.github",
             text: "M1hailFR",
             link: "https://github.com/M1hailFR",
           },
           {
-            icon: "mail",
+            icon: "hh",
             title: "resume.socials.hh",
             text: "Mihail",
             link: "https://orenburg.hh.ru/resume/06706b0fff09e23bc70039ed1f65466f56444f",
@@ -62,12 +62,12 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
         title: "resume.languages.title",
         list: [
           {
-            icon: "mail",
+            icon: "ru-flag",
             title: "resume.languages.russian.name",
             text: "resume.languages.russian.level",
           },
           {
-            icon: "mail",
+            icon: "en-flag",
             title: "resume.languages.english.name",
             text: "resume.languages.english.level",
           },
@@ -78,39 +78,32 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
       title: "resume.projects.title",
       list: [
         {
-          image: "/img/shared/info/zoro.jpg",
+          image: "/img/shared/projects/project1.png",
           title: "resume.projects.project1.title",
           text: "resume.projects.project1.text",
-          site: "https://rmnch.netlify.app/",
+          site: "https://rmnch.netlify.app",
           repo: "https://github.com/M1hailFR/rmnch",
         },
         {
-          image: "/img/shared/info/zoro.jpg",
+          image: "/img/shared/projects/project2.png",
           title: "resume.projects.project2.title",
           text: "resume.projects.project2.text",
-          site: "https://rmnch.netlify.app/",
-          repo: "https://github.com/M1hailFR/rmnch",
+          site: "https://prospisanie.ru",
+          repo: "https://github.com/M1hailFR/bn",
         },
         {
-          image: "/img/shared/info/zoro.jpg",
+          image: "/img/shared/projects/vue.png",
           title: "resume.projects.project3.title",
           text: "resume.projects.project3.text",
-          site: "https://rmnch.netlify.app/",
-          repo: "https://github.com/M1hailFR/rmnch",
+          site: "https://front-end-site2.web.app",
+          repo: "",
         },
         {
-          image: "/img/shared/info/zoro.jpg",
+          image: "/img/shared/projects/vue.png",
           title: "resume.projects.project4.title",
           text: "resume.projects.project4.text",
-          site: "https://rmnch.netlify.app/",
-          repo: "https://github.com/M1hailFR/rmnch",
-        },
-        {
-          image: "/img/shared/info/zoro.jpg",
-          title: "resume.projects.project5.title",
-          text: "resume.projects.project5.text",
-          site: "https://rmnch.netlify.app/",
-          repo: "https://github.com/M1hailFR/rmnch",
+          site: "https://sgs-vostok-limited.netlify.app",
+          repo: "https://github.com/M1hailFR/sgs-vostok-limited ",
         },
       ],
     },
@@ -119,100 +112,143 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
       title: "resume.experience.title",
       list: [
         {
-          image: "/img/shared/info/zoro.jpg",
+          image: "/img/shared/experience/toscale.png",
           time: "resume.experience.experience1.time",
           title: "resume.experience.experience1.title",
           text: "resume.experience.experience1.text",
           post: "resume.experience.experience1.post",
         },
         {
-          image: "/img/shared/info/zoro.jpg",
+          image: "/img/shared/experience/relead.png",
           time: "resume.experience.experience2.time",
           title: "resume.experience.experience2.title",
           text: "resume.experience.experience2.text",
           post: "resume.experience.experience2.post",
         },
+      ],
+    },
+    skills: {
+      title: "resume.skills.title",
+      list: [
         {
-          image: "/img/shared/info/zoro.jpg",
-          time: "resume.experience.experience3.time",
-          title: "resume.experience.experience3.title",
-          text: "resume.experience.experience3.text",
-          post: "resume.experience.experience3.post",
+            
+          title: "resume.skills.design.title",
+          icon: "palette",
+          info: [
+            "resume.skills.design.list.uiDesign",
+            "resume.skills.design.list.responsive",
+            "resume.skills.design.list.accessibility",
+            "resume.skills.design.list.detailsAttention",
+            "resume.skills.design.list.consistentSpacing", 
+            "resume.skills.design.list.animationsTransitions",
+            "resume.skills.design.list.userExperience",
+            "resume.skills.design.list.colorSchemes",
+            "resume.skills.design.list.typography",
+            "resume.skills.design.list.prototyping",
+            "resume.skills.design.list.adaptiveDesign",
+            "resume.skills.design.list.microAnimations",
+            "resume.skills.design.list.styleGuides"
+          ]
+        },
+        {
+          title: "resume.skills.development.title",
+          icon: "code",
+          info: [
+            "resume.skills.development.list.vue",
+            "resume.skills.development.list.composition",
+            "resume.skills.development.list.options",
+            "resume.skills.development.list.solid",
+            "resume.skills.development.list.typescript",
+            "resume.skills.development.list.scss",
+            "resume.skills.development.list.cssModules",
+            "resume.skills.development.list.css",
+            "resume.skills.development.list.flexbox",
+            "resume.skills.development.list.i18n",
+            "resume.skills.development.list.pinia",
+            "resume.skills.development.list.vuex",
+            "resume.skills.development.list.router",
+            "resume.skills.development.list.toast",
+            "resume.skills.development.list.meta",
+            "resume.skills.development.list.oop",
+            "resume.skills.development.list.dry",
+            "resume.skills.development.list.component",
+            "resume.skills.development.list.modular"
+          ]
         },
       ],
     },
-    skills: [
-      {
-        title: "resume.skills.design.title",
-        list: [
-          {
-            title: "Web Design",
-            text: "Создание современных веб-интерфейсов",
-          },
-          {
-            title: "Mobile Design",
-            text: "Дизайн мобильных приложений",
-          },
-          {
-            title: "User Experience",
-            text: "UX исследования и проектирование",
-          },
-          {
-            title: "Design System",
-            text: "Разработка дизайн-систем",
-          },
-          {
-            title: "Tools",
-            text: "Wireframing, Prototyping, Testing",
-          },
-        ],
-      },
-      {
-        title: "resume.skills.development.title",
-        list: [
-          {
-            title: "Frontend",
-            text: "HTML, CSS, JavaScript",
-          },
-          {
-            title: "Frameworks",
-            text: "React.js, Next.js",
-          },
-          {
-            title: "UI Libraries",
-            text: "Chakra UI, Emotion, Framer",
-          },
-          {
-            title: "TypeScript",
-            text: "Строгая типизация кода",
-          },
-        ],
-      },
-    ],
-    education: [
-      {
-        title: "resume.education.title",
-        list: [
-          {
-            image: "/img/shared/info/zoro.jpg",
-            title: "resume.education.education1.title",
-            text: "resume.education.education1.text",
-            time: "resume.education.education1.time",
-          },
-        ],
-      },
-    ],
-    tools: [
-      {
-        title: "resume.tools.title",
-        list: [
-          {
-            title: "resume.tools.tool1.title",
-            text: "resume.tools.tool1.text",
-            image: "/img/shared/info/zoro.jpg",
-          },
-        ],
-      },
-    ],
+    education: {
+      title: "resume.education.title",
+      list: [
+        {
+          image: "/img/shared/education/osu.png",
+          title: "resume.education.education1.title",
+          text: "resume.education.education1.text",
+          time: "resume.education.education1.time",
+        },
+        {
+          image: "/img/shared/education/jsninja.png",
+          title: "resume.education.education2.title",
+          text: "resume.education.education2.text",
+          time: "resume.education.education2.time",
+        },
+      ],
+    },
+
+    tools: {
+      title: "resume.tools.title",
+      list: [
+        {
+          title: "resume.tools.tool1.title",
+          text: "resume.tools.tool1.text",
+          image: "/img/shared/tools/figma.png",
+        },
+        {
+          title: "resume.tools.tool2.title",
+          text: "resume.tools.tool2.text",
+          image: "/img/shared/tools/vscode.png",
+        },
+        {
+          title: "resume.tools.tool3.title",
+          text: "resume.tools.tool3.text",
+          image: "/img/shared/tools/git.png",
+        },
+        {
+          title: "resume.tools.tool4.title",
+          text: "resume.tools.tool4.text",
+          image: "/img/shared/tools/postman.png",
+        },
+        {
+          title: "resume.tools.tool5.title",
+          text: "resume.tools.tool5.text",
+          image: "/img/shared/tools/npm.png",
+        },
+        {
+          title: "resume.tools.tool6.title",
+          text: "resume.tools.tool6.text",
+          image: "/img/shared/tools/pnpm.png",
+        },
+        {
+          title: "resume.tools.tool7.title",
+          text: "resume.tools.tool7.text",
+          image: "/img/shared/tools/docker.png",
+        },
+        {
+          title: "resume.tools.tool8.title",
+          text: "resume.tools.tool8.text",
+          image: "/img/shared/tools/terminal.png",
+        },
+        {
+          title: "resume.tools.tool9.title",
+          text: "resume.tools.tool9.text",
+          image: "/img/shared/tools/webpack.png",
+        },
+        {
+          title: "resume.tools.tool10.title",
+          text: "resume.tools.tool10.text",
+          image: "/img/shared/tools/vite.png",
+        },
+      ],
+    },
   },
 });

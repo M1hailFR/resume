@@ -18,7 +18,7 @@
             <span v-if="item.title" class="text-caption opacity-60">
               {{ t(item.title) }}
             </span>
-            <span v-if="item.text" class="text-body2">
+            <span v-if="item.text" class="text-title6">
               {{ t(item.text) }}
             </span>
           </span>

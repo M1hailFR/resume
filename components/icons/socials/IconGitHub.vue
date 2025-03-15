@@ -3,35 +3,37 @@
     xmlns="http://www.w3.org/2000/svg"
     :width="width || size"
     :height="height || size"
-    viewBox="0 0 64 65"
+    viewBox="0 0 24 24"
     fill="none"
     :transform="`rotate(${getIconRotate(rotate)})`"
   >
-    <rect y=".497" width="64" height="64" rx="32" fill="#419FD9" />
-    <rect y=".497" width="64" height="64" rx="32" fill="url(#a)" />
-    <path
-      d="M14.383 31.79Q28.342 25.58 33 23.603c8.865-3.765 10.707-4.419 11.908-4.44.264-.005.854.062 1.237.378.323.268.411.63.454.883.042.254.095.832.053 1.283-.48 5.154-2.559 17.66-3.616 23.432-.448 2.443-1.329 3.262-2.182 3.342-1.854.174-3.261-1.25-5.057-2.453-2.81-1.88-4.396-3.05-7.123-4.885-3.152-2.12-1.109-3.286.687-5.191.47-.499 8.638-8.084 8.796-8.772.02-.086.038-.407-.149-.576-.186-.17-.462-.112-.66-.066q-.423.099-13.465 9.087-1.911 1.34-3.462 1.306c-1.14-.025-3.332-.658-4.962-1.2-2-.663-3.588-1.014-3.45-2.14q.109-.88 2.375-1.801"
-      fill="#fff"
-    />
-    <defs>
-      <linearGradient id="a" x1="32" y1=".497" x2="32" y2="64.022" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#2AABEE" />
-        <stop offset="1" stop-color="#229ED9" />
-      </linearGradient>
-    </defs>
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    >
+      <path
+        d="M3.5 15.668q.675.081 1 .618c.326.537 1.537 2.526 2.913 2.526H9.5m5.672-3.513q.823 1.078.823 1.936V21m-5.625-5.609q-.87.954-.869 1.813V21"
+      />
+      <path
+        d="M15.172 15.299c1.202-.25 2.293-.682 3.14-1.316c1.448-1.084 2.188-2.758 2.188-4.411c0-1.16-.44-2.243-1.204-3.16c-.425-.511.819-3.872-.286-3.359c-1.105.514-2.725 1.198-3.574.947c-.909-.268-1.9-.416-2.936-.416c-.9 0-1.766.111-2.574.317c-1.174.298-2.296-.363-3.426-.848c-1.13-.484-.513 3.008-.849 3.422C4.921 7.38 4.5 8.44 4.5 9.572c0 1.653.895 3.327 2.343 4.41c.965.722 2.174 1.183 3.527 1.41"
+      />
+    </g>
   </svg>
 </template>
 
 <script setup lang="ts">
-import { getIconRotate, type IPropsIcon } from '../shared';
+import { getIconRotate, type IPropsIcon } from "../shared";
 defineOptions({
-  name: 'IconGitHub'
+  name: "IconGitHub",
 });
 
 withDefaults(defineProps<IPropsIcon>(), {
-  width: '',
-  height: '',
+  width: "",
+  height: "",
   size: 16,
-  rotate: null
+  rotate: null,
 });
 </script>

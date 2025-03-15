@@ -19,18 +19,19 @@
                 />
                 <v-title
                   tag="h1"
-                  defaultClass="text-body2 text-neutrals-3 mt-3"
+                  defaultClass="text-body2 text-neutrals-3 mt-3 mb-2"
+                  style="max-width: 300px"
                   :title="t(fields.text)"
                 />
               </div>
 
-              <div class="card--inner-wrapper-left-content">
+              <div class="card--inner-wrapper-left-group">
                 <div
-                  class="text-body1 d-flex flex-column"
+                  class="card--inner-wrapper-left-group-content rounded-lg text-body1"
                   v-for="(list, idx) in fields.lists"
                   :key="idx"
                 >
-                  <div class="card--divider my-3 my-md-4" />
+                  <div class="d-none d-md-block card--divider my-1" />
                   <v-title
                     v-if="list.title"
                     tag="h2"
@@ -47,7 +48,7 @@
               <VTimeline
                 v-if="fields.projects.title"
                 :title="t(fields.projects.title)"
-                icon="check"
+                icon="blocks"
                 customMark
               >
                 <div class="card--inner-wrapper-right-projects">
@@ -67,13 +68,14 @@
               <VTimeline
                 v-if="fields.experience.title"
                 :title="t(fields.experience.title)"
+                icon="blocks"
                 customMark
               >
                 <VTimeline
                   v-for="(list, idx) in fields.experience.list"
                   :key="idx"
                   :title="list.time"
-                  additionalClass="text-body3 mt-2"
+                  additionalClass="text-body3 mt-sm-2"
                 >
                   <CardWithInfo
                     :title="list.title"
@@ -81,38 +83,52 @@
                     :image="list.image"
                     :post="list.post"
                     :time="list.time"
+                    :min-width="256"
                   />
                 </VTimeline>
               </VTimeline>
 
               <!-- Skills -->
-              <VTimeline title="Skills" icon="check" customMark>
-                <div class="d-flex flex-column gap-2">
-                  <div>Skills 1</div>
-                  <div>Skills 2</div>
-                  <div>Skills 3</div>
+              <VTimeline
+                v-if="fields.skills.title"
+                :title="t(fields.skills.title)"
+                icon="blocks"
+                customMark
+              >
+                <CardWithInfo
+                  v-for="(list, idx) in fields.skills.list"
+                  :key="idx"
+                  :title="list.title"
+                  :info="list.info"
+                  :min-width="164"
+                  :icon="list.icon"
+                />
+              </VTimeline>
+
+              <!-- Education -->
+              <VTimeline :title="t(fields.education.title)" icon="blocks" customMark>
+                <div class="card--inner-wrapper-right-education">
+                  <CardWithLogo
+                    v-for="(list, idx) in fields.education.list"
+                    :key="idx"
+                    :text="list.text"
+                    :logo="list.image"
+                    :value="list.title"
+                    :time="list.time"
+                  />
                 </div>
               </VTimeline>
-              <VTimeline title="Education" icon="check" customMark>
-                <div class="d-flex flex-column gap-2">
-                  <div>Education 1</div>
-                  <div>Education 2</div>
-                  <div>Education 3</div>
-                </div>
-              </VTimeline>
-              <VTimeline title="Tools" icon="check" customMark>
-                <div class="d-flex flex-wrap ga-2">
-                  <div class="bg-neutrals-1" style="width: 32px; height: 32px">1</div>
-                  <div class="bg-neutrals-2" style="width: 32px; height: 32px">2</div>
-                  <div class="bg-neutrals-3" style="width: 32px; height: 32px">3</div>
-                  <div class="bg-neutrals-4" style="width: 32px; height: 32px">4</div>
-                  <div class="bg-neutrals-5" style="width: 32px; height: 32px">5</div>
-                  <div class="bg-neutrals-6" style="width: 32px; height: 32px">6</div>
-                  <div class="bg-neutrals-7" style="width: 32px; height: 32px">7</div>
-                  <div class="bg-brand-1" style="width: 32px; height: 32px">b1</div>
-                  <div class="bg-brand-2" style="width: 32px; height: 32px">b2</div>
-                  <div class="bg-background" style="width: 32px; height: 32px">bg</div>
-                  <div class="bg-danger" style="width: 32px; height: 32px">d</div>
+              <!-- Tools -->
+              <VTimeline :title="t(fields.tools.title)" icon="blocks" customMark>
+                <div class="card--inner-wrapper-right-tools">
+                  <CardWithLogo
+                    v-for="(list, idx) in fields.tools.list"
+                    :key="idx"
+                    :text="list.text"
+                    :logo="list.image"
+                    :value="list.title"
+                    size="small"
+                  />
                 </div>
               </VTimeline>
             </div>
@@ -127,7 +143,7 @@
 import { type IFieldsProps } from "~/core/types/components";
 import { CardWithLogo, CardWithImageExample, CardWithInfo } from "~/components/shared";
 import { useTranslation } from "~/composables/useTranslation";
-import { VLink, VTitle, VTimeline, VList, type IListItem } from "@/components/ui";
+import { VLink, VBadge, VTitle, VTimeline, VList, type IListItem } from "@/components/ui";
 
 defineOptions({
   name: "BlockCardResume",
@@ -174,25 +190,45 @@ const props = defineProps<IFieldsProps<ICardResume>>();
         height: fit-content;
         z-index: 10;
         padding-bottom: $spacer * 6;
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: $spacer * 4;
-        column-gap: $spacer * 10;
+        &-group {
+          width: 100%;
+          display: grid;
+          margin-top: $spacer * 6;
+          grid-template-columns: repeat(1, 1fr);
+          gap: $spacer * 4;
+          &-content {
+            padding: $spacer * 4;
+            border: 1px solid get-rgb-color(brand-2, 0.1);
+            background-color: get-rgb-color(neutrals-1, 0.02);
+          }
+        }
 
         @include above(map.get($grid-breakpoints, sm)) {
           padding: $spacer * 6;
           padding-right: $spacer * 5;
-          &-content {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-
-            gap: $spacer * 10;
+          &-group {
+            grid-template-columns: repeat(3, 1fr);
+            &-content {
+              padding: $spacer * 4;
+            }
           }
         }
         @include above(map.get($grid-breakpoints, md)) {
           top: 68px;
           position: sticky;
+          &-group {
+            width: 100%;
+            display: grid;
+
+            margin-top: $spacer * 0;
+            grid-template-columns: repeat(1, 1fr);
+            gap: $spacer * 4;
+            &-content {
+              padding: $spacer * 0;
+              border: none;
+              background-color: get-rgb-color(background);
+            }
+          }
         }
       }
       &-right {
@@ -201,11 +237,46 @@ const props = defineProps<IFieldsProps<ICardResume>>();
           display: grid;
           gap: $spacer * 4;
         }
+        &-education {
+          display: grid;
+          gap: $spacer * 4;
+        }
+        &-tools {
+          display: grid;
+          gap: $spacer * 4;
+        }
+        @include above(map.get($grid-breakpoints, xs)) {
+          &-tools {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
         @include above(map.get($grid-breakpoints, sm)) {
           padding: $spacer * 6;
           padding-left: $spacer * 5;
           &-projects {
             grid-template-columns: repeat(2, 1fr);
+          }
+          &-education {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          &-tools {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @include above(map.get($grid-breakpoints, md)) {
+          &-education {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          &-tools {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+        @include above(map.get($grid-breakpoints, lg)) {
+          &-education {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          &-tools {
+            grid-template-columns: repeat(5, 1fr);
           }
         }
       }
@@ -221,7 +292,5 @@ const props = defineProps<IFieldsProps<ICardResume>>();
     height: 1px;
     background-color: get-rgb-color(background);
   }
-  // background-color: get-rgb-color(neutrals-2);
-  // color: get-rgb-color(neutrals-1);
 }
 </style>

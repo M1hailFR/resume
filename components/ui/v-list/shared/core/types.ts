@@ -11,4 +11,5 @@ export interface IListItem {
   description?: string;
   site?: string;
   repo?: string;
+  info?: string[];
 }

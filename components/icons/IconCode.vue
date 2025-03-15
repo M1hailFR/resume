@@ -9,7 +9,7 @@
   >
     <path
       fill="currentColor"
-      d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5"
+      d="M4.825 12.025L8.7 15.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.213-.325T2.426 12t.063-.375t.212-.325l4.6-4.6q.3-.3.713-.3t.712.3t.3.713t-.3.712zm14.35-.05L15.3 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.3.3-.7.288t-.7-.313t-.3-.712t.3-.713z"
     />
   </svg>
 </template>
@@ -17,13 +17,10 @@
 <script setup lang="ts">
 import { getIconRotate, type IPropsIcon } from "./shared";
 defineOptions({
-  name: "IconSite",
+  name: "IconCode",
 });
 
 withDefaults(defineProps<IPropsIcon>(), {
-  width: "",
-  height: "",
   size: 16,
-  rotate: null,
 });
 </script>
