@@ -17,7 +17,7 @@
       </div>
       <div class="card--wrapper-right">
         <v-title v-if="text" defaultClass="card--text text-caption opacity-60" :title="t(text)" />
-        <div v-if="info" class="d-flex flex-wrap ga-2">
+        <div v-if="info" class="d-flex flex-wrap ga-2 mt-4 mt-md-0">
           <VBadge v-for="(item, idx) in info" :key="idx" variant="outlined" size="small">
             {{ t(item) }}
           </VBadge>
