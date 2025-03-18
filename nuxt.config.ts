@@ -1,9 +1,9 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 
 // PWA Config
-const title = "Rmnch";
+const title = "Frontend Developer";
 const shortTitle = "Rmnch";
-const description = "Rmnch resume";
+const description = "Mikhail Filippov resume";
 const author = "fmr";
 const themeColor = "#4f46e5";
 

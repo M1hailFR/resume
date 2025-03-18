@@ -85,7 +85,7 @@ export default {
       development: {
         title: "Разработка",
         list: {
-          vue: "Vue.js 3 / Nuxt 33",
+          vue: "Vue.js 3 / Nuxt 3",
           composition: "Composition API",
           options: "Options API",
           solid: "SOLID",

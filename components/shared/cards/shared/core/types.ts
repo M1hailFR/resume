@@ -58,6 +58,7 @@ export interface ICardWithInfoProps {
   time?: string;
   info?: string[];
   icon?: IconPropType;
+  site?: string;
   minWidth?: number;
 }
 

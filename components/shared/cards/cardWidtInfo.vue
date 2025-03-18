@@ -5,15 +5,25 @@
         <div class="card--wrapper-left-content">
           <NuxtImg v-if="image" fit="cover" :src="image" class="card--image rounded-lg" />
 
-          <div class="card--wrapper-left-content-info" >
+          <div class="card--wrapper-left-content-info">
             <div class="d-flex align-center ga-2">
               <component v-if="icon" :is="getIconByKey(icon)" size="32" class="card--icon" />
               <v-title defaultClass="text-body2 mt-1" :title="t(title)" />
             </div>
-            
-            <v-title v-if="post" defaultClass="text-body2 opacity-60" :title="t(post)" />
+
+            <v-title v-if="post" defaultClass="text-caption opacity-60" :title="t(post)" />
           </div>
+          
         </div>
+        <v-link
+          v-if="site"
+          :link="site"
+          target="_target"
+          class="card--link mt-1 d-flex align-center ga-2 text-caption opacity-60"
+        >
+          <component :is="IconSite" :size="20" rotate="half" class="card--link-icon" />
+          {{ site }}
+        </v-link>
       </div>
       <div class="card--wrapper-right">
         <v-title v-if="text" defaultClass="card--text text-caption opacity-60" :title="t(text)" />
@@ -28,10 +38,12 @@
 </template>
 
 <script setup lang="ts">
-import { VTitle, VBadge } from "~/components/ui";
+import { IconSite } from "~/components/icons";
+import { VTitle, VBadge, VLink } from "~/components/ui";
 import { type ICardWithInfoProps } from "./shared";
 import { useTranslation } from "~/composables/useTranslation";
 import { getIconByKey } from "~/core/helpers/icons";
+
 defineOptions({
   name: "CardWithInfo",
 });

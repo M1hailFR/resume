@@ -83,6 +83,7 @@
                     :image="list.image"
                     :post="list.post"
                     :time="list.time"
+                    :site="list?.site"
                     :min-width="256"
                   />
                 </VTimeline>

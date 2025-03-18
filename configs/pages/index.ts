@@ -117,6 +117,7 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
           title: "resume.experience.experience1.title",
           text: "resume.experience.experience1.text",
           post: "resume.experience.experience1.post",
+          site: "https://toscale.io/ru",
         },
         {
           image: "/img/shared/experience/relead.png",

@@ -22,9 +22,9 @@
         v-if="site"
         :link="site"
         target="_target"
-        class="card--link mt-1 d-flex align-center ga-2"
+        class="card--link mt-1 d-flex align-center ga-2 text-caption"
       >
-        <component :is="IconSite" :size="20" rotate="half" class="card--link-icon" />
+        <component :is="IconSite" :size="20" rotate="half" class="card--link-icon " />
         {{ site }}
       </v-link>
     </div>
