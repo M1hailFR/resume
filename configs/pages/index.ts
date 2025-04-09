@@ -78,21 +78,21 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
       title: "resume.projects.title",
       list: [
         {
-          image: "/img/shared/projects/project1.png",
+          image: "/img/shared/projects/vue.png",
           title: "resume.projects.project1.title",
           text: "resume.projects.project1.text",
           site: "https://prolawyers.netlify.app",
           repo: "https://github.com/M1hailFR/lawyers",
         },
         {
-          image: "/img/shared/projects/project2.png",
+          image: "/img/shared/projects/project1.png",
           title: "resume.projects.project2.title",
           text: "resume.projects.project2.text",
           site: "https://rmnch.netlify.app",
           repo: "https://github.com/M1hailFR/rmnch",
         },
         {
-          image: "/img/shared/projects/project3.png",
+          image: "/img/shared/projects/project2.png",
           title: "resume.projects.project3.title",
           text: "resume.projects.project3.text",
           site: "https://prospisanie.ru",
