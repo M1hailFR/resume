@@ -121,19 +121,23 @@ export default {
     projects: {
       title: "Projects",
       project1: {
+        title: "prolawyers",
+        text: "A modern web project built on the Nuxt.js 3, uses Tailwind CSS for styling. The project has a full-fledged structure with components, pages, Pinia state store and is configured for deployment on the Netlify platform",
+      },
+      project2: {
         title: "rmnch",
         text: "This is a Nuxt.js 3 web project using Vuetify as a UI framework and including PWA functionality. The project has an advanced architecture using Pinia for state management, TypeScript support, and includes moment integration for working with dates and input masking for forms.",
       },
-      project2: {
+      project3: {
         title: "pro.spisanie",
         text: "A modern web project built on the Nuxt.js 3 framework using TypeScript, which includes Yandex.Metrics integration and uses Tailwind CSS for styling. The project has a full-fledged structure with components, pages, Pinia state store and is configured for deployment on the Netlify platform",
       },
-      project3: {
-        title: "Project 3",
-        text: "This is a modern single-page application (SPA) on Vue.js 3 with full architecture. The project also has a configured Service Worker for PWA functionality support, making it potentially available offline.",
-      },
       project4: {
         title: "Project 4",
+        text: "This is a modern single-page application (SPA) on Vue.js 3 with full architecture. The project also has a configured Service Worker for PWA functionality support, making it potentially available offline.",
+      },
+      project5: {
+        title: "Project 5",
         text: "This is a Vue 3 project with Vite that represents a container and operations management system. The project uses a modern technology stack including Pinia for state management, TypeScript for typing and SASS for styling, and is configured for deployment on the Netlify platform.",
       },
     },

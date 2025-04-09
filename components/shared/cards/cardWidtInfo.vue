@@ -22,7 +22,7 @@
           class="card--link mt-1 d-flex align-center ga-2 text-caption opacity-60"
         >
           <component :is="IconSite" :size="20" rotate="half" class="card--link-icon" />
-          {{ site }}
+          {{ site.split('//').pop() }}
         </v-link>
       </div>
       <div class="card--wrapper-right">
