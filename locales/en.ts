@@ -166,7 +166,6 @@ export default {
           As a frontend developer, I'm engaged in creating and updating key user interface components, implementing a content management system through Strapi CMS, working on responsive design and optimizing user experience for various types of clients. I use a modern technology stack including Tailwind CSS for styling, various libraries for animations and interactivity (motion-v, GSAP), Pinia state management system, integration with mapping services (Yandex Maps) and follow best development practices with regular commits and active participation in code review.
           <br/>
           <br/> - Development and support of the client-side of web applications
-          <br/> - Development and support of the client-side of web applications
           <br/> - Development and maintenance of the server-side of applications
           <br/> - Refactoring of program code
           <br/> - Development of user interface, including its interactive elements
