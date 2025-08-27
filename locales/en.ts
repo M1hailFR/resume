@@ -158,7 +158,23 @@ export default {
         text: `Creating modern web applications on Vue.js/Nuxt, developing landing pages and multi-page websites; at Relead successfully implemented a series of projects creating adaptive websites using Vue 3, Nuxt 3, Pinia, Vuetify, Tailwind; 
           set up multilingual support and integration with external services; paid special attention to user interface quality, performance and SEO optimization, which allowed increasing website conversion by 10% and improving metrics`,
         post: "Frontend Developer",
-        time: "January 2025 - present",
+        time: "January 2025 - May 2025",
+      },
+      experience3: {
+        title: "Bureau Suchkov",
+        text: `Actively working on projects - these are modern web applications based on Nuxt.js/Vue.js, designed to present company services.
+          As a frontend developer, I'm engaged in creating and updating key user interface components, implementing a content management system through Strapi CMS, working on responsive design and optimizing user experience for various types of clients. I use a modern technology stack including Tailwind CSS for styling, various libraries for animations and interactivity (motion-v, GSAP), Pinia state management system, integration with mapping services (Yandex Maps) and follow best development practices with regular commits and active participation in code review.
+          <br/>
+          <br/> - Development and support of the client-side of web applications
+          <br/> - Development and support of the client-side of web applications
+          <br/> - Development and maintenance of the server-side of applications
+          <br/> - Refactoring of program code
+          <br/> - Development of user interface, including its interactive elements
+          <br/> - Website layout in accordance with design and interaction
+          <br/> - Creation of landing pages and single-page promotional sites
+          <br/> - Fixing identified bugs`,
+        post: "Full-stack Developer",
+        time: "May 2025 - present",
       },
     },
     tools: {

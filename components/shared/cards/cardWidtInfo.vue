@@ -3,7 +3,8 @@
     <div class="card--wrapper pb-4">
       <div class="card--wrapper-left" :style="`min-width: ${minWidth}px`">
         <div class="card--wrapper-left-content">
-          <NuxtImg v-if="image" fit="cover" :src="image" class="card--image rounded-lg" />
+          <img v-if="image" fit="cover" :src="image" class="card--image rounded-lg" />
+          <!-- <NuxtImg v-if="image" fit="cover" :src="image" class="card--image rounded-lg" /> -->
 
           <div class="card--wrapper-left-content-info">
             <div class="d-flex align-center ga-2">

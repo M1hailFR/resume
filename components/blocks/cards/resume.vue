@@ -5,7 +5,7 @@
         <div class="card--inner rounded-lg shadow-1">
           <div class="card--inner-wrapper">
             <div class="card--inner-wrapper-left">
-              <NuxtImg src="/img/shared/info/zoro.jpg" class="card--avatar" />
+              <img src="/img/shared/info/mi2.jpg" class="card--avatar" />
               <div>
                 <v-title
                   tag="h2"

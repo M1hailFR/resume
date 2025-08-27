@@ -51,10 +51,16 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
             link: "https://github.com/M1hailFR",
           },
           {
+            icon: "github",
+            title: "resume.socials.github",
+            text: "MihailRmnvch",
+            link: "https://github.com/MihailRmnvch",
+          },
+          {
             icon: "hh",
             title: "resume.socials.hh",
             text: "Mihail",
-            link: "https://orenburg.hh.ru/resume/06706b0fff09e23bc70039ed1f65466f56444f",
+            link: "https://hh.ru/resume/06706b0fff09e23bc70039ed1f65466f56444f",
           },
         ],
       },
@@ -78,7 +84,7 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
       title: "resume.projects.title",
       list: [
         {
-          image: "/img/shared/projects/vue.png",
+          image: "/img/shared/projects/vue.svg",
           title: "resume.projects.project1.title",
           text: "resume.projects.project1.text",
           site: "https://prolawyers.netlify.app",
@@ -99,14 +105,14 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
           repo: "https://github.com/M1hailFR/bn",
         },
         {
-          image: "/img/shared/projects/vue.png",
+          image: "/img/shared/projects/vue.svg",
           title: "resume.projects.project4.title",
           text: "resume.projects.project4.text",
           site: "https://front-end-site2.web.app",
           repo: "",
         },
         {
-          image: "/img/shared/projects/vue.png",
+          image: "/img/shared/projects/vue.svg",
           title: "resume.projects.project5.title",
           text: "resume.projects.project5.text",
           site: "https://sgs-vostok-limited.netlify.app",
@@ -132,6 +138,14 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
           title: "resume.experience.experience2.title",
           text: "resume.experience.experience2.text",
           post: "resume.experience.experience2.post",
+        },
+        {
+          image: "/img/shared/experience/bs.jpg",
+          time: "resume.experience.experience3.time",
+          title: "resume.experience.experience3.title",
+          text: "resume.experience.experience3.text",
+          post: "resume.experience.experience3.post",
+          site: "https://bureausuchkov.com",
         },
       ],
     },

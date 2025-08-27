@@ -2,7 +2,7 @@
   <div class="card rounded-lg px-4 pt-4 pb-3 transition-all">
     <div class="card--wrapper">
       <div class="card--content">
-        <NuxtImg v-if="image" fit="cover" :src="image" class="card--image rounded-lg" />
+        <img v-if="image" fit="cover" :src="image" class="card--image rounded-lg" />
       </div>
       <div class="card--info">
         <div v-if="title" class="text-neutrals-1 text-body2">{{ t(title) }}</div>
