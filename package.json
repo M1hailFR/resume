@@ -24,7 +24,7 @@
     "moment": "^2.30.1"
   },
   "dependencies": {
-    "@nuxt/image": "1.8.1",
+    "@nuxt/image": "1.11.0",
     "@pinia/nuxt": "^0.9.0",
     "inputmask": "^5.0.9",
     "moment": "^2.30.1",
