@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" ref="cardRef">
     <v-container>
       <div class="card--wrapper">
         <div class="card--inner rounded-lg shadow-1">
@@ -119,6 +119,39 @@
                   />
                 </div>
               </VTimeline>
+
+              <!-- Services -->
+              <VTimeline
+                v-if="fields.services?.title"
+                :title="t(fields.services.title)"
+                icon="blocks"
+                customMark
+              >
+                <div class="card--inner-wrapper-right-services">
+                  <div
+                    v-for="(service, idx) in fields.services.list"
+                    :key="idx"
+                    class="card--service-item"
+                  >
+                    <div class="card--service-icon">
+                      <component :is="getIconByKey(service.icon)" size="32" />
+                    </div>
+                    <div class="card--service-content">
+                      <v-title
+                        tag="h3"
+                        :title="t(service.title)"
+                        defaultClass="text-body1 text-neutrals-1 mb-1"
+                      />
+                      <v-title
+                        tag="p"
+                        :title="t(service.text)"
+                        defaultClass="text-body3 text-neutrals-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </VTimeline>
+
               <!-- Tools -->
               <VTimeline :title="t(fields.tools.title)" icon="blocks" customMark>
                 <div class="card--inner-wrapper-right-tools">
@@ -145,6 +178,7 @@ import { type IFieldsProps } from "~/core/types/components";
 import { CardWithLogo, CardWithImageExample, CardWithInfo } from "~/components/shared";
 import { useTranslation } from "~/composables/useTranslation";
 import { VLink, VBadge, VTitle, VTimeline, VList, type IListItem } from "@/components/ui";
+import { getIconByKey } from "~/core/helpers/icons";
 
 defineOptions({
   name: "BlockCardResume",
@@ -160,6 +194,17 @@ interface IResumeData {
   list: IListItem[];
 }
 
+interface IServiceItem {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+interface IServices {
+  title: string;
+  list: IServiceItem[];
+}
+
 interface ICardResume {
   name: string;
   title: string;
@@ -170,11 +215,56 @@ interface ICardResume {
   skills: IResumeData;
   education: IResumeData;
   tools: IResumeData;
+  services: IServices;
 }
 
 const { t } = useTranslation();
 
 const props = defineProps<IFieldsProps<ICardResume>>();
+
+const { $gsap, $ScrollTrigger } = useNuxtApp();
+
+const cardRef = ref(null);
+
+onMounted(() => {
+  if (!$gsap || !$ScrollTrigger) return;
+  
+  const ctx = $gsap.context(() => {
+    $gsap.from('.card--inner-wrapper-right > *', {
+      scrollTrigger: {
+        trigger: '.card',
+        start: 'top 80%',
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out',
+    });
+    
+    $gsap.from('.card--avatar', {
+      scale: 0,
+      duration: 0.8,
+      ease: 'back.out(1.7)',
+    });
+    
+    $gsap.from('.card--inner-wrapper-left-group > *', {
+      scrollTrigger: {
+        trigger: '.card--inner-wrapper-left',
+        start: 'top 80%',
+      },
+      x: -30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: 'power2.out',
+    });
+  }, cardRef.value);
+  
+  onUnmounted(() => {
+    ctx.revert();
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -246,9 +336,16 @@ const props = defineProps<IFieldsProps<ICardResume>>();
           display: grid;
           gap: $spacer * 4;
         }
+        &-services {
+          display: grid;
+          gap: $spacer * 3;
+        }
         @include above(map.get($grid-breakpoints, xs)) {
           &-tools {
             grid-template-columns: repeat(2, 1fr);
+          }
+          &-services {
+            grid-template-columns: repeat(1, 1fr);
           }
         }
         @include above(map.get($grid-breakpoints, sm)) {
@@ -292,6 +389,35 @@ const props = defineProps<IFieldsProps<ICardResume>>();
   &--divider {
     height: 1px;
     background-color: get-rgb-color(background);
+  }
+  &--service-item {
+    display: flex;
+    gap: $spacer * 3;
+    padding: $spacer * 3;
+    border: 1px solid get-rgb-color(brand-2, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: get-rgb-color(brand-2, 0.3);
+    }
+  }
+  &--service-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: get-rgb-color(brand-2, 0.1);
+    border-radius: 12px;
+    color: rgb(var(--v-theme-brand-2));
+  }
+  &--service-content {
+    flex: 1;
+    min-width: 0;
   }
 }
 </style>

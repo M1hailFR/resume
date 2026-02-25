@@ -176,11 +176,15 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
           icon: "code",
           info: [
             "resume.skills.development.list.vue",
+            "resume.skills.development.list.nuxt",
+            "resume.skills.development.list.nuxtContent",
+            "resume.skills.development.list.vite",
             "resume.skills.development.list.composition",
             "resume.skills.development.list.options",
             "resume.skills.development.list.solid",
             "resume.skills.development.list.typescript",
             "resume.skills.development.list.scss",
+            "resume.skills.development.list.tailwind",
             "resume.skills.development.list.cssModules",
             "resume.skills.development.list.css",
             "resume.skills.development.list.flexbox",
@@ -190,6 +194,8 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
             "resume.skills.development.list.router",
             "resume.skills.development.list.toast",
             "resume.skills.development.list.meta",
+            "resume.skills.development.list.ssr",
+            "resume.skills.development.list.ssg",
             "resume.skills.development.list.oop",
             "resume.skills.development.list.dry",
             "resume.skills.development.list.component",
@@ -268,6 +274,32 @@ export const MAIN_CARD_RESUME_BLOCK = Object.freeze({
           title: "resume.tools.tool10.title",
           text: "resume.tools.tool10.text",
           image: "/img/shared/tools/vite.png",
+        },
+      ],
+    },
+
+    services: {
+      title: "resume.services.title",
+      list: [
+        {
+          icon: "code",
+          title: "resume.services.service1.title",
+          text: "resume.services.service1.text",
+        },
+        {
+          icon: "palette",
+          title: "resume.services.service2.title",
+          text: "resume.services.service2.text",
+        },
+        {
+          icon: "chart-arrow",
+          title: "resume.services.service3.title",
+          text: "resume.services.service3.text",
+        },
+        {
+          icon: "chat",
+          title: "resume.services.service4.title",
+          text: "resume.services.service4.text",
         },
       ],
     },

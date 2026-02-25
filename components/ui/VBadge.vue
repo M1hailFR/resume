@@ -71,13 +71,32 @@ const sizeClasses = computed(() => {
   &.v-chip--variant-outlined {
     border: 1px solid currentColor !important;
     opacity: 0.7;
+    transition: opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    
     &:hover {
       opacity: 1;
+      border-color: rgb(var(--v-theme-brand-1)) !important;
+      box-shadow: inset 0 0 0 1px rgb(var(--v-theme-brand-1));
     }
   }
 
   &.v-chip--variant-text {
     width: max-content;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      border-color: rgb(var(--v-theme-brand-1)) !important;
+      box-shadow: inset 0 0 0 1px rgb(var(--v-theme-brand-1));
+    }
+  }
+  
+  &.v-chip--variant-flat {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      border-color: rgb(var(--v-theme-brand-1)) !important;
+      box-shadow: inset 0 0 0 1px rgb(var(--v-theme-brand-1));
+    }
   }
 }
 </style>

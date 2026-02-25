@@ -84,11 +84,15 @@ export default {
         title: "Development",
         list: {
           vue: "Vue.js 3 / Nuxt 3",
+          nuxt: "Nuxt 3 (SSR/SSG)",
+          nuxtContent: "Nuxt Content",
+          vite: "Vite",
           composition: "Composition API",
           options: "Options API",
           solid: "SOLID principles",
           typescript: "TypeScript",
           scss: "SCSS/SASS",
+          tailwind: "Tailwind CSS",
           cssModules: "CSS Modules",
           css: "CSS",
           flexbox: "Flexbox",
@@ -98,6 +102,8 @@ export default {
           router: "Vue Router",
           toast: "Notification System",
           meta: "SEO optimization",
+          ssr: "SSR",
+          ssg: "SSG",
           oop: "OOP",
           dry: "DRY principles",
           component: "Component Approach",
@@ -217,6 +223,25 @@ export default {
       tool10: {
         title: "Vite",
         text: "Project building",
+      },
+    },
+    services: {
+      title: "Services",
+      service1: {
+        title: "SPA/PWA Development",
+        text: "Creating modern single-page applications and progressive web apps with offline support",
+      },
+      service2: {
+        title: "Layout from Design",
+        text: "Exact implementation of Figma layouts with attention to details, animations, and responsiveness",
+      },
+      service3: {
+        title: "Optimization",
+        text: "Performance, SEO, accessibility and Core Web Vitals improvement",
+      },
+      service4: {
+        title: "Support",
+        text: "Technical support for existing projects, bug fixing, feature development",
       },
     },
   },
